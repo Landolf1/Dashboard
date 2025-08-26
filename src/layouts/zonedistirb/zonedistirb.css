@@ -1,0 +1,125 @@
+.zone-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 16px;
+    width: 500px;
+    font-family: "Segoe UI", sans-serif;
+    color: #111; /* texto principal */
+  }
+  
+  .zone-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .zone-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111; /* título negro */
+    margin: 0;
+  }
+  
+  .zone-header p {
+    font-size: 13px;
+    color: #666; /* subtítulo gris */
+    margin: 0;
+  }
+  
+  .zone-btn {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #374151; /* gris oscuro */
+  }
+  
+  .zone-btn:hover {
+    background: #f3f4f6;
+  }
+  
+  .zone-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .zone-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .zone-item:last-child {
+    border-bottom: none;
+  }
+  
+  .zone-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #374151; /* gris oscuro */
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .dot-emerald { background: #22c55e; }
+  .dot-blue { background: #3b82f6; }
+  .dot-yellow { background: #f59e0b; }
+  .dot-purple { background: #8b5cf6; }
+  
+  .zone-bar {
+    position: relative;
+    height: 8px;
+    border-radius: 9999px;
+    background: #f3f4f6;
+    overflow: hidden;
+  }
+  
+  .zone-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+  }
+  
+  .fill-emerald { background: #22c55e; }
+  .fill-blue { background: #3b82f6; }
+  .fill-yellow { background: #f59e0b; }
+  .fill-purple { background: #8b5cf6; }
+  
+  .zone-values {
+    text-align: right;
+  }
+  
+  .zone-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+  }
+  
+  .zone-percent {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .zone-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #374151;
+    font-weight: 500;
+  }
+  
