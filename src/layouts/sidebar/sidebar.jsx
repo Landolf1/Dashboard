@@ -1,13 +1,13 @@
-import React from 'react'
-import ButtonBar from '../../components/button-bar/button-bar'
-import './sidebar.css'
-import { faAddressCard, faArrowRightArrowLeft, faBarcode, faCircleExclamation, faFileCircleExclamation, faFileInvoice, faHome } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChartBar } from '@fortawesome/free-solid-svg-icons'
-
+import React, { useContext } from 'react';
+import ButtonBar from '../../components/button-bar/button-bar';
+import './sidebar.css';
+import { faAddressCard, faArrowRightArrowLeft, faBarcode, faFileCircleExclamation, faFileInvoice, faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { useAppContext } from '../../context/AppContext';
 
 function Sidebar() {
-    const [activeButton, setActiveButton] = React.useState('Dashboard');
+    const { currentPage, setCurrentPage } = useAppContext();
 
     const buttons = [
         { text: 'Dashboard', icon: faHome },
@@ -19,6 +19,10 @@ function Sidebar() {
         { text: 'Entregas y Retornos', icon: faArrowRightArrowLeft }
     ];
 
+    const handleButtonClick = (text) => {
+        setCurrentPage(text);
+    };
+
     return (
         <div className="sidebar">
             <div className="container">
@@ -28,11 +32,15 @@ function Sidebar() {
 
                 <div className="menu">
                     {buttons.map(({ text, icon }) => (
-                        <div key={text} onClick={() => setActiveButton(text)}>
+                        <div 
+                            key={text} 
+                            onClick={() => handleButtonClick(text)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <ButtonBar 
                                 buttonText={text} 
                                 icon={<FontAwesomeIcon icon={icon} />}
-                                active={activeButton === text} 
+                                active={currentPage === text} 
                             />
                         </div>
                     ))}

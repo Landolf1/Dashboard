@@ -73,3 +73,93 @@ html, body {
     margin: 0 auto;
     padding: 20px 0;
 }
+
+.table-container {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #eaeef5;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-table thead {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.custom-table th {
+    color: #4b5563;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 14px 16px;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.custom-table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.custom-table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.custom-table td {
+    padding: 14px 16px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.2s ease;
+}
+
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-table tr:hover td {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.custom-table tr:not(:last-child) td {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Add subtle animation on row hover */
+@keyframes rowHover {
+    from { background-color: #ffffff; }
+    to { background-color: #f8fafc; }
+}
+
+.custom-table tr {
+    transition: all 0.2s ease;
+}
+
+.custom-table tr:hover {
+    animation: rowHover 0.3s ease forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .custom-table {
+        min-width: 1000px;
+    }
+}
+  
