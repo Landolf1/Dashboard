@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Analisis from "./pages/Analisis/Analisis.jsx";
-import Reports from "./pages/Reports/Reports";
+import Reports from "./pages/Reports/Reportes";
 import Cedulas from "./pages/Cedulas/Cedulas";
 import Escaneo from "./pages/Escaneo/Escaneo";
 import Reclamaciones from "./pages/Reclamaciones/Reclamaciones";

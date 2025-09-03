@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from "../../layouts/sidebar/sidebar";
 import Header from "../../layouts/header/header";
 import TablesContent from "./TablesContent";
+import Reportes from "../Reports/Reportes";
 import "./Dashboard.css";
 
 function Dashboard() {

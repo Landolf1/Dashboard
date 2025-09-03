@@ -1,0 +1,102 @@
+.form-card {
+    width: 100%;
+    max-width: 700px; /* Más grande */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    padding: 30px 40px;
+    margin-top: 40px;
+    border: 1px solid #eaeef5;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+  }
+  
+  .report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Área de arrastrar y soltar */
+  .upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-area.active {
+    border-color: #3b82f6;
+    background-color: #f0f9ff;
+  }
+  
+  .upload-label p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+  
+  .select-text {
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .upload-area:hover {
+    border-color: #3b82f6;
+    outline: none;
+  }
+  
+  /* Botón */
+  .submit-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  }
+  
